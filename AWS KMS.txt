@@ -1,0 +1,13 @@
+ ____________________________
+|			     |
+|    AWS KMS (SSE-C)         |
+|____________________________|
+using openSSL
+
+For   RSAES_OAEP_SHA_1   wrapping Key
+
+On Linux:
+1)   sudo openssl rand -out plain_text_aes_key.bin 32
+2)   openssl rsautl -encrypt -in plain_text_aes_key.bin -oaep -inkey wrappingKey_521a8b4c-8463-4ccd-a762-7bcf6a9b2cfc_1227021858 -pubin -keyform DER -out enc.aes.key
+
+
